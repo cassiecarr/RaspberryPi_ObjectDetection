@@ -12,11 +12,11 @@ import cv2
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-p", "--MobileNetSSD_deploy.prototxt.txt", required=True,
+ap.add_argument("-p", "--prototxt", required=True,
 	help="path to Caffe 'deploy' prototxt file")
-ap.add_argument("-m", "--MobileNetSSD_deploy.caffemodel", required=True,
+ap.add_argument("-m", "--model", required=True,
 	help="path to Caffe pre-trained model")
-ap.add_argument("-c", "--0.4", type=float, default=0.2,
+ap.add_argument("-c", "--confidence", type=float, default=0.2,
 	help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
 
